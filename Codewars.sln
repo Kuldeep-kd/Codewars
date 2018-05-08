@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringsMix", "StringsMix\St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalToRoman", "DecimalToRoman\DecimalToRoman.csproj", "{A7AF34C3-E5C1-4481-B2B5-BC39FB72D413}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextBiggerNumber", "NextBiggerNumber\NextBiggerNumber.csproj", "{DCB479AC-6CE5-4FA7-8C99-5C4E7A58B654}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{A7AF34C3-E5C1-4481-B2B5-BC39FB72D413}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7AF34C3-E5C1-4481-B2B5-BC39FB72D413}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7AF34C3-E5C1-4481-B2B5-BC39FB72D413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCB479AC-6CE5-4FA7-8C99-5C4E7A58B654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCB479AC-6CE5-4FA7-8C99-5C4E7A58B654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCB479AC-6CE5-4FA7-8C99-5C4E7A58B654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCB479AC-6CE5-4FA7-8C99-5C4E7A58B654}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
