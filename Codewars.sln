@@ -35,6 +35,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalToRoman", "DecimalTo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextBiggerNumber", "NextBiggerNumber\NextBiggerNumber.csproj", "{DCB479AC-6CE5-4FA7-8C99-5C4E7A58B654}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base64 Encoding", "Base64 Encoding\Base64 Encoding.csproj", "{93DF124C-ED94-4AE3-94F9-F4A308EE0E93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoleculeToAtom", "MoleculeToAtom\MoleculeToAtom.csproj", "{AFF2BC95-238D-40CC-9A1C-293C103DCB14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +109,14 @@ Global
 		{DCB479AC-6CE5-4FA7-8C99-5C4E7A58B654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCB479AC-6CE5-4FA7-8C99-5C4E7A58B654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCB479AC-6CE5-4FA7-8C99-5C4E7A58B654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93DF124C-ED94-4AE3-94F9-F4A308EE0E93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93DF124C-ED94-4AE3-94F9-F4A308EE0E93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93DF124C-ED94-4AE3-94F9-F4A308EE0E93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93DF124C-ED94-4AE3-94F9-F4A308EE0E93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFF2BC95-238D-40CC-9A1C-293C103DCB14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFF2BC95-238D-40CC-9A1C-293C103DCB14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFF2BC95-238D-40CC-9A1C-293C103DCB14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFF2BC95-238D-40CC-9A1C-293C103DCB14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
