@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Cipher_Text
 {
@@ -9,58 +6,11 @@ namespace Cipher_Text
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Cipher_text1("ABCDEFGHIJKLMN"));
-            Console.WriteLine(Cipher_text2("Kuldeep Thakre", "PANDA"));
+            Cipher cipher = new Cipher();
+
+            Console.WriteLine(cipher.Cipher_Ceaser("ABCDEFGHIJKLMN", 3));
+            Console.WriteLine(cipher.Cipher_Vigenere("Hello This is Kuldeep....", "PANDA"));
             Console.ReadKey();
-        }
-
-        public static string Cipher_text2(string v1, string v2)
-        {
-            int keyflag = 0, key, r;
-            string ans = "";
-            char[] keyarr = v2.ToArray();
-
-            foreach(char c in v1)
-            {
-
-                if (c == ' ')
-                {
-                    ans += " ";
-                }
-                if (keyflag < keyarr.Length && char.IsLetter(c))
-                {
-                    key = ((int)keyarr[keyflag]) % 26;
-                    r = ((int)c + key) % 26;
-
-                    ans += (char.IsUpper(c)) ? (char)(r + 65) : (char)(r + 97);
-
-                    keyflag++;
-                }
-                if(!(keyflag < keyarr.Length))
-                {
-                    keyflag = 0;
-                }
-
-                
-            }
-
-
-            return ans;
-        }
-
-        public static string Cipher_text1(string hello)
-        {
-            string cipher="";
-            int x=0;
-
-            foreach( char c in hello)
-            {
-                x = (Convert.ToInt32(c) + 2 ) % 26;
-                //Console.WriteLine((char)(x+65));
-                cipher += ((char)(x + 65));
-            }
-
-            return cipher;
         }
 
     }
