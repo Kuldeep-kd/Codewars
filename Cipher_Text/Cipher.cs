@@ -15,7 +15,6 @@ namespace Cipher_Text
                 foreach (char c in hello)
                 {
                     x = (( (char.IsUpper(c))?  c  : char.ToUpper(c) ) + shift) % 26;
-
                     cipher += (char.IsUpper(c)) ? (char)(x + 65) : (char)(x + 97);
                 }
                 return cipher;
@@ -32,25 +31,16 @@ namespace Cipher_Text
 
                     if (!char.IsLetter(c))
                         ans += c.ToString();
-
-
+                    
                     if (keyflag < keyarr.Length && char.IsLetter(c))
                     {
                         key = ((int)keyarr[keyflag]) % 26;
-
-                        if (!char.IsUpper(c))
-                            r = ((int)char.ToUpper(c) + key) % 26;
-                        else
-                            r = ((int)c + key) % 26;
-
-                        ans += (char.IsUpper(c)) ? (char)(r + 65) : (char)(r + 97);
-
+                        r = (((char.IsUpper(c)) ? c : char.ToUpper(c)) + key) % 26;
+                        ans += (char)((char.IsUpper(c)) ? (r + 65) : (r + 97));
                         keyflag++;
                     }
                     if (!(keyflag < keyarr.Length))
-                    {
                         keyflag = 0;
-                    }
                 }
                 return ans;
             }
@@ -67,14 +57,36 @@ namespace Cipher_Text
                 foreach (char c in str)
                 {
                     x = (((char.IsUpper(c)) ? c : char.ToUpper(c)) - key) % 26;
-                    ans += (char.IsUpper(c)) ? (char)(x + 65) : (char)(x + 97);
+                    ans += (char)((char.IsUpper(c)) ? (x + 65) : (x + 97));
                 }
-
                 return ans;
             }
 
 
+            public string Vigenere(string str, string Key)
+            {
+                int keyflag = 0, key, r;
+                string ans = "";
+                char[] keyarr = Key.ToArray();
 
+                foreach (char c in str)
+                {
+
+                    if (!char.IsLetter(c))
+                        ans += c.ToString();
+
+                    if (keyflag < keyarr.Length && char.IsLetter(c))
+                    {
+                        key = ((int)keyarr[keyflag]) % 26;
+                        r = (((char.IsUpper(c)) ? c : char.ToUpper(c)) - key) % 26;
+                        ans += (char)((char.IsUpper(c)) ? (r + 65) : (r + 97));
+                        keyflag++;
+                    }
+                    if (!(keyflag < keyarr.Length))
+                        keyflag = 0;
+                }
+                return ans;
+            }
 
 
         }

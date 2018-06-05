@@ -11,9 +11,11 @@ namespace Cipher_Text
             Decode decode = new Decode();
 
 
-            Console.WriteLine(encode.Ceaser("Kul", 2));
-            Console.WriteLine(encode.Vigenere("Hello This is Kuldeep....", "PANDA"));
-            Console.WriteLine(decode.Ceaser("Zja", 2));
+            Console.WriteLine("Encode Ceaser : " + encode.Ceaser(Console.ReadLine(), 2));
+            Console.WriteLine("Encode Vignere : " + encode.Vigenere("Kuldeep", "Panda"));
+            Console.WriteLine("Decoding \n1. Ceaser\n2. Vignere\n");
+            Console.WriteLine("Decode Ceaser : " + decode.Ceaser(Console.ReadLine(), 2));
+            Console.WriteLine("Decode Vignere : " + decode.Vigenere(Console.ReadLine(), Console.ReadLine()));
             Console.ReadKey();
             
         }
