@@ -10,33 +10,36 @@ namespace Cipher_Text
         static void Main(string[] args)
         {
             Console.WriteLine(Cipher_text1("ABCDEFGHIJKLMN"));
-            Console.WriteLine(Cipher_text2("I LIKE YOU","PANDA"));
+            Console.WriteLine(Cipher_text2("Kuldeep Thakre", "PANDA"));
             Console.ReadKey();
         }
 
         public static string Cipher_text2(string v1, string v2)
         {
-            int keyflag=0,key,r;
+            int keyflag = 0, key, r;
             string ans = "";
             char[] keyarr = v2.ToArray();
+
             foreach(char c in v1)
             {
+
                 if (c == ' ')
                 {
                     ans += " ";
                 }
-                else if (keyflag < keyarr.Length)
+                if (keyflag < keyarr.Length && char.IsLetter(c))
                 {
-                    
                     key = ((int)keyarr[keyflag]) % 26;
-
                     r = ((int)c + key) % 26;
 
-                    ans += (char)(r + 65);
+                    ans += (char.IsUpper(c)) ? (char)(r + 65) : (char)(r + 97);
+
                     keyflag++;
                 }
-                else
+                if(!(keyflag < keyarr.Length))
+                {
                     keyflag = 0;
+                }
 
                 
             }
