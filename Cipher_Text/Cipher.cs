@@ -5,52 +5,78 @@ namespace Cipher_Text
 {
     class Cipher
     {
-        public string Cipher_Ceaser(string hello, int shift)
+        public class Encode
         {
-
-            string cipher = "";
-            int x = 0;
-            foreach (char c in hello)
+            public string Ceaser(string hello, int shift)
             {
-                x = (Convert.ToInt32(c) + shift) % 26;
-                //Console.WriteLine((char)(x+65));
-                cipher += ((char)(x + 65));
+
+                string cipher = "";
+                int x = 0;
+                foreach (char c in hello)
+                {
+                    x = (( (char.IsUpper(c))?  c  : char.ToUpper(c) ) + shift) % 26;
+
+                    cipher += (char.IsUpper(c)) ? (char)(x + 65) : (char)(x + 97);
+                }
+                return cipher;
             }
-            return cipher;
+
+            public string Vigenere(string str, string Key)
+            {
+                int keyflag = 0, key, r;
+                string ans = "";
+                char[] keyarr = Key.ToArray();
+
+                foreach (char c in str)
+                {
+
+                    if (!char.IsLetter(c))
+                        ans += c.ToString();
+
+
+                    if (keyflag < keyarr.Length && char.IsLetter(c))
+                    {
+                        key = ((int)keyarr[keyflag]) % 26;
+
+                        if (!char.IsUpper(c))
+                            r = ((int)char.ToUpper(c) + key) % 26;
+                        else
+                            r = ((int)c + key) % 26;
+
+                        ans += (char.IsUpper(c)) ? (char)(r + 65) : (char)(r + 97);
+
+                        keyflag++;
+                    }
+                    if (!(keyflag < keyarr.Length))
+                    {
+                        keyflag = 0;
+                    }
+                }
+                return ans;
+            }
         }
 
-        public string Cipher_Vigenere(string str, string Key)
+
+        public class Decode
         {
-            int keyflag = 0, key, r;
-            string ans = "";
-            char[] keyarr = Key.ToArray();
 
-            foreach (char c in str)
+            public string Ceaser(string str,int key)
             {
-
-                if (!char.IsLetter(c))
-                    ans += c.ToString();
-
-
-                if (keyflag < keyarr.Length && char.IsLetter(c))
+                string ans="";
+                int x;
+                foreach (char c in str)
                 {
-                    key = ((int)keyarr[keyflag]) % 26;
-
-                    if (!char.IsUpper(c))
-                        r = ((int)char.ToUpper(c) + key) % 26;
-                    else
-                        r = ((int)c + key) % 26;
-
-                    ans += (char.IsUpper(c)) ? (char)(r + 65) : (char)(r + 97);
-
-                    keyflag++;
+                    x = (((char.IsUpper(c)) ? c : char.ToUpper(c)) - key) % 26;
+                    ans += (char.IsUpper(c)) ? (char)(x + 65) : (char)(x + 97);
                 }
-                if (!(keyflag < keyarr.Length))
-                {
-                    keyflag = 0;
-                }
+
+                return ans;
             }
-            return ans;
+
+
+
+
+
         }
     }
 }

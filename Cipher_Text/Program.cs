@@ -1,4 +1,5 @@
 ﻿using System;
+using static Cipher_Text.Cipher;
 
 namespace Cipher_Text
 {
@@ -6,11 +7,15 @@ namespace Cipher_Text
     {
         static void Main(string[] args)
         {
-            Cipher cipher = new Cipher();
+            Encode encode = new Encode();
+            Decode decode = new Decode();
 
-            Console.WriteLine(cipher.Cipher_Ceaser("ABCDEFGHIJKLMN", 3));
-            Console.WriteLine(cipher.Cipher_Vigenere("Hello This is Kuldeep....", "PANDA"));
+
+            Console.WriteLine(encode.Ceaser("Kul", 2));
+            Console.WriteLine(encode.Vigenere("Hello This is Kuldeep....", "PANDA"));
+            Console.WriteLine(decode.Ceaser("Zja", 2));
             Console.ReadKey();
+            
         }
 
     }
