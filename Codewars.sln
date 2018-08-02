@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoleculeToAtom", "MoleculeT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cipher_Text", "Cipher_Text\Cipher_Text.csproj", "{06B77562-867D-4B27-B63F-1419776CF21E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LastDigitofHugeNumber", "LastDigitofHugeNumber\LastDigitofHugeNumber.csproj", "{EFB18294-BC28-402D-B4C0-365E347E0BBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{06B77562-867D-4B27-B63F-1419776CF21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06B77562-867D-4B27-B63F-1419776CF21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06B77562-867D-4B27-B63F-1419776CF21E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB18294-BC28-402D-B4C0-365E347E0BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB18294-BC28-402D-B4C0-365E347E0BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB18294-BC28-402D-B4C0-365E347E0BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB18294-BC28-402D-B4C0-365E347E0BBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
